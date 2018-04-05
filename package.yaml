@@ -22,10 +22,14 @@ description:         Please see the README on Github at <https://github.com/ocra
 dependencies:
 - base >= 4.7 && < 5
 - streaming
+- vector
 
 library:
   source-dirs: src
-  exposed-modules: Numeric.Optimization.Streaming
+  exposed-modules:
+    - Numeric.Optimization.Streaming
+    - Numeric.Optimization.Streaming.Algorithms
+  
 
 # executables:
 #   optimization-streaming-exe:
