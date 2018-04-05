@@ -1,0 +1,50 @@
+name:                optimization-streaming
+version:             0.1.0.0
+github:              "ocramz/optimization-streaming"
+license:             BSD3
+author:              "Marco Zocca"
+maintainer:          "zocca.marco gmail"
+copyright:           "2018 Marco Zocca"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on Github at <https://github.com/ocramz/optimization-streaming#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- foldl
+
+library:
+  source-dirs: src
+  exposed-modules: Numeric.Optimization.Streaming
+
+# executables:
+#   optimization-streaming-exe:
+#     main:                Main.hs
+#     source-dirs:         app
+#     ghc-options:
+#     - -threaded
+#     - -rtsopts
+#     - -with-rtsopts=-N
+#     dependencies:
+#     - optimization-streaming
+
+tests:
+  optimization-streaming-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - optimization-streaming
