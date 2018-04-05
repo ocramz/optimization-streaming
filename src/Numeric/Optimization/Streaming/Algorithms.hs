@@ -1,6 +1,14 @@
 module Numeric.Optimization.Streaming.Algorithms where
 
 
+-- | Normalized Adaptive Gradient update (from https://arxiv.org/pdf/1305.6646.pdf )
+
+updateW :: (Ord p, Fractional p) => p -> p -> p -> p
+updateW wi si xi = if abs xi > si then wi*si/xi else wi
+
+updateScale :: (Ord p, Num p) => p -> p -> p
+updateScale si xi = max xia si where xia = abs xi
+
 
 {- from `vlearn`
 
